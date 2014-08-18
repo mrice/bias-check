@@ -42,7 +42,7 @@ public class MarketAnalyzer implements Processor {
 				exchange.setProperty("compliance-status", "comply");
 			}
 			
-			String note = String.format("%s Population: %s; originations: %s; pct: %s; warn-threshold: %s; noncomply-threshold: %s", thresholds.getZipCode(),
+			String note = String.format("%s Population: %s; originations: %s; pct: %,.4f; warn-threshold: %,.4f; noncomply-threshold: %,.4f", thresholds.getZipCode(),
 					thresholds.getMinorityPopulation(), summary.getOriginationCount(), pctSold, thresholds.getThresholdWarn(), thresholds.getThresholdNoncomply());
 			
 			report.setNotes(note);
